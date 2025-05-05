@@ -1,0 +1,23 @@
+// questão 2 lista 3D
+#include <stdio.h>
+int main (){
+	float area, taxa, areadesmatada = 0, porcentagem;
+	int ano = 2025, anofinal;
+		printf ("Digite a area total da regiao:");
+		scanf ("%f", &area);
+		printf ("Digite a taxa de desmatamento anual desta regiao:");
+		scanf ("%f", &taxa);
+	
+	do {
+		areadesmatada = ((area*taxa)/100) + areadesmatada;
+		porcentagem = ((areadesmatada * 100) / area) + porcentagem;
+		area = area - areadesmatada;
+		ano++;
+		
+	}while(porcentagem <= 80);
+	
+	printf ("A area com 20%% restando eh: %.2f\n", (100 - porcentagem));
+	printf ("Isso ocorrera no ano %d", ano);
+	
+	
+}
