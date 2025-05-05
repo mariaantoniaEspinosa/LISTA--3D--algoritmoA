@@ -15,19 +15,20 @@ int main (){
 	printf ("Digite o valor do coeficiente c:");
 	scanf ("%f", &c);
 	
-	delta = pow(b,2)*4*a*c;
-	
-	if 	(delta>=0){
-		printf ("O valor do delta sera: %.2f\n", delta);
-		bhaskara1 = (- b + sqrt (delta)) / (2*a);
-		bhaskara2 = (- b - sqrt (delta)) / (2*a);
-		printf ("O valor da raiz 1 sera: %.2f\n", bhaskara1);
-		printf ("O valor da raiz 2 sera: %.2f\n", bhaskara2);
+	if (a == 0){
+		printf ("Sua equacao sera de grau 1: %.2f x + %.2f = 0", a, b);
 	}else {
-		printf ("Não foi possível calcular as raizes");
-	}
-	if (a =0){
-		printf ("Sua equacao sera de grau 1: %fx, %f = 0", a, b);
+		delta = pow(b,2)*4*a*c;
+		if 	(delta>=0){
+			printf ("O valor do delta sera: %.2f\n", delta);
+			bhaskara1 = (- b + sqrt (delta)) / (2*a);
+			bhaskara2 = (- b - sqrt (delta)) / (2*a);
+			printf ("O valor da raiz 1 sera: %.2f\n", bhaskara1);
+			printf ("O valor da raiz 2 sera: %.2f\n", bhaskara2);
+		}else {
+			printf ("Não foi possível calcular as raizes");
+		}
+
 	}
 	return 0;
 }
