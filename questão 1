@@ -18,7 +18,7 @@ int main (){
 	if (a == 0){
 		printf ("Sua equacao sera de grau 1: %.2f x + %.2f = 0", a, b);
 	}else {
-		delta = pow(b,2)*4*a*c;
+		delta = delta = pow(b,2) - (4*a*c);
 		if 	(delta>=0){
 			printf ("O valor do delta sera: %.2f\n", delta);
 			bhaskara1 = (- b + sqrt (delta)) / (2*a);
