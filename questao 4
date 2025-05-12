@@ -1,0 +1,31 @@
+//questão 4 da lista 3D - Maria Antônia 
+#include <stdio.h>
+int main (){
+	int cod, tipo;
+	float consumido, maiorconsumido = 0;
+//maior consumo dentre tipoR e seu código.
+//maior consumo dentre tipoC e seu código.
+//media de consumo do tipoI.
+	printf ("Digite qual sua categoria de consumo, residencial, comercial ou industrial:");
+	scanf ("%d", &tipo);
+	
+	printf ("Digite seu codigo de consumidor:");
+	scanf ("%d", &cod);
+	
+	printf ("Digite a quantidade de energia gasta em kWh:");
+	scanf ("%d", &consumido);
+	
+	if (tipo = residencial){
+		if (consumido> maiorconsumido){
+			maiorconsumido = consumido
+			printf ("O consumidor residencial com maior consumo, teve %d gasto em kWh", maiorconsumido);
+		}
+	} else if (tipo == comercial){
+		if (consumido> maiorconsumido){
+		maiorconsumido = consumido
+		printf ("O consumidor comercial com maior consumo, teve %d gasto em kWh", maiorconsumido);
+	} else if (tipo == industrial){
+		media = 
+	}
+	}
+}
