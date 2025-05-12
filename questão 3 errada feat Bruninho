@@ -1,19 +1,13 @@
+//questão 3 da lista 3D - MARIA ANTÔNIA ESPINOSA
 #include <stdio.h>
 int main (){
-	float cel, fah=70;
-	int i =1;
+	int cel, fah;
 	
-	while (i){
-		printf ("Digite a temperatura em fahrenheit entre 50 e 70 graus:\n ");
-		scanf ("%f", &fah);
+	printf ("Converso de Fahrenheit para Celsius (50 graus - 70 graus)\n");
 	
-		if (fah<50 || (fah >70)){
-			printf ("Digite um valor valido!\n");
-		} else {
-			cel = (fah - 32) / 1.8;
-			printf ("A temperatura em graus Celsius sera: %.1f\n", cel);
-			i++;
-		}
+	for (fah=50;fah<=70;fah++){
+		cel = (fah-32)/1.8;
+		printf ("\n%d graus Fahrenheit = %d graus celsius", fah, cel);
 	}
 	return 0;
 }
