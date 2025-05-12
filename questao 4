@@ -1,31 +1,48 @@
 //questão 4 da lista 3D - Maria Antônia 
 #include <stdio.h>
 int main (){
-	int cod, tipo;
-	float consumido, maiorconsumido = 0;
-//maior consumo dentre tipoR e seu código.
-//maior consumo dentre tipoC e seu código.
-//media de consumo do tipoI.
-	printf ("Digite qual sua categoria de consumo, residencial, comercial ou industrial:");
-	scanf ("%d", &tipo);
+	int  tipomenor, i=0;
+	float consumido, media, soma =0, maiorconsumido=0, menorconsumido=9999, cod;
+	char tipo;
+	printf ("Digite qual sua categoria de consumo, residencial, comercial ou industrial, digite R, C ou I.\n Digite 'x' para sair quando não hover mais consumidores.\n");
+	scanf (" %c", &tipo);
 	
-	printf ("Digite seu codigo de consumidor:");
-	scanf ("%d", &cod);
-	
-	printf ("Digite a quantidade de energia gasta em kWh:");
-	scanf ("%d", &consumido);
-	
-	if (tipo = residencial){
-		if (consumido> maiorconsumido){
-			maiorconsumido = consumido
-			printf ("O consumidor residencial com maior consumo, teve %d gasto em kWh", maiorconsumido);
+	if (tipo != 'x'){
+
+		do {
+		
+		printf ("Digite seu codigo de consumidor:\n");
+		scanf ("%d", &cod);
+		
+		printf ("Digite a quantidade de energia gasta em kWh:\n");
+		scanf ("%f", &consumido);
+		
+		printf ("Digite qual sua categoria de consumo, residencial, comercial ou industrial, digite R, C ou I.\n Digite 'x' para sair quando não hover mais consumidores.\n");
+		scanf (" %c", &tipo);
+		
+		if (tipo == 'C'){
+			if (consumido>maiorconsumido){
+				maiorconsumido = consumido;
+				maiorconsumido = cod;
+			}
 		}
-	} else if (tipo == comercial){
-		if (consumido> maiorconsumido){
-		maiorconsumido = consumido
-		printf ("O consumidor comercial com maior consumo, teve %d gasto em kWh", maiorconsumido);
-	} else if (tipo == industrial){
-		media = 
+		if (tipo=='R'){
+			if (consumido>maiorconsumido){
+				maiorconsumido = consumido;
+				maiorconsumido = cod;
+			}
+		}
+		if (tipo=='I'){
+			i++;
+			soma = soma + consumido;
+		}
+		}while (tipo !='x');
+		media = soma / i;
+		printf ("O consumidor residencial com maior consumo, teve %f gasto em kWh", consumido);
+		printf ("O consumidor comercial com maior consumo, teve %f gasto em kWh", consumido);
+		if (media < 0){
+			printf ("A media de consumo entre os consumidores industriais em kWh foi de %f", media);
+		}
 	}
-	}
+	return 0;
 }
