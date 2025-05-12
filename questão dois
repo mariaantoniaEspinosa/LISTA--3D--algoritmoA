@@ -1,0 +1,27 @@
+//questão 2 lista 3D Maria Antônia Espinosa W
+#include <stdio.h>
+int main (){
+	
+	float areaatual, areadesmatada, taxa ;
+	int anoatual, ano, i;
+	
+	printf ("Digite a area total em km^2 atualmente:\n");
+	scanf ("%f", &areaatual);
+	
+	printf  ("Digite a %% da taxa do desmatamento anual:\n");
+	scanf ("%f", &taxa);
+	
+	printf ("Digite o ano atual:");
+	scanf ("%d", &anoatual);
+	
+	areadesmatada = areaatual*0.2;
+	
+	do {
+		areaatual = areaatual - (areaatual * taxa/100);
+		i++;
+	}while (areaatual>=areadesmatada);
+	//printf ("%f", areaatual);
+	ano = anoatual + i;
+	printf ("\nNo ano em que a area desmatada sera menor ou igual a 20%% da area atual sera %d, e a area correspondera a %.2f km^2", ano, areaatual);
+	return 0;	
+}
